@@ -1,0 +1,17 @@
+tsd-navbar.tsd-page-toolbar.navbar.fixed-top.navbar-expand.navbar-os.bg-tl-white.bg-td-dark.border-bottom.border-tl-gray.border-td-black
+  .container-fluid.d-flex.justify-content-between
+    .d-flex
+      bs5-toggle-button.d-flex.d-xl-none.align-items-center.me-3(target-id='left-sidebar')
+        ul.nav
+          li.nav-item.d-flex.align-items-center
+            bs5-icon(src='/iconset/svg/icon_menu.svg' size='32' rv-hide='isActive' rv-on-click='toggle')
+          li.nav-item.d-flex.align-items-center
+            bs5-icon(src='/iconset/svg/icon_close.svg' size='32' rv-show='isActive' rv-on-click='toggle')
+      a.navbar-brand.d-flex.align-items-center(href='/')
+        img.img-fluid.mh-100.d-td-none(src='/images/logo.svg' alt='Gjsify Logo')
+        img.img-fluid.mh-100.d-tl-none(src='/images/logo-light.svg' alt='Gjsify Logo')
+    .d-flex
+      bs5-theme-button.d-flex.align-items-center(mode='icon')
+        button.btn.btn-icon(rv-on-click='toggleTheme')
+          bs5-icon.d-td-none(color='warning' src='/iconset/svg/icon_sun_alt.svg' size='32')
+          bs5-icon.d-tl-none.color-orange(color='warning' src='/iconset/svg/icon_moon_alt.svg' size='32')

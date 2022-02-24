@@ -1,0 +1,32 @@
+{
+  "name": "@gjsify/website",
+  "version": "0.0.1",
+  "description": "Website of gjsify.org ",
+  "main": "package.json",
+  "repository": "git@github.com:gjsify/website.git",
+  "author": "Pascal Garber <pascal@artandcode.studio>",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@ribajs/eslint-config": "workspace:^",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/experimental-utils": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "workspaces": [
+    "packages/*",
+    "!vendor/riba",
+    "vendor/riba/packages/*",
+    "vendor/riba/backend/*",
+    "vendor/riba/infra/*",
+    "vendor/riba/vendor/*",
+    "!vendor/riba/infra/cli",
+    "!vendor/riba/infra/doc",
+    "!vendor/riba/infra/schematics"
+  ],
+  "packageManager": "yarn@3.2.0"
+}

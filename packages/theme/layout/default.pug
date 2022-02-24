@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name="color-scheme" content="light dark")
+    meta(name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)")
+    meta(name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)")
+    meta(name="msapplication-TileColor" content="#4a86cf")
+
+    link(rel='stylesheet', type='text/css', href='/csr/main.css')
+
+    link(rel='shortcut icon' href='/favicons/favicon.ico')
+    link(rel='apple-touch-icon' sizes='180x180' href='/favicons/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/favicons/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/favicons/favicon-16x16.png')
+    link(rel='manifest' href='/favicons/site.webmanifest')
+    link(rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#4a86cf')
+
+  body
+    include ../partials/sidebar.pug
+    include ../partials/navbar.pug
+    router-view#main(listen-all-links="true")
+      block content            
+    script(async src='/csr/vendors.bundle.js')
+    script(async src='/csr/main.bundle.js')

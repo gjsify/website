@@ -1,0 +1,3 @@
+[submodule "vendor/riba"]
+	path = vendor/riba
+	url = https://github.com/ribajs/riba.git
