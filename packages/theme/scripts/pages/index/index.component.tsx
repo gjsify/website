@@ -2,9 +2,7 @@ import { PageComponent } from "@ribajs/ssr";
 import { TemplateFunction } from "@ribajs/core";
 
 export interface Scope {
-  title: string;
-  content: string;
-  obj: any;
+
 }
 
 export class IndexPageComponent extends PageComponent {
@@ -13,16 +11,11 @@ export class IndexPageComponent extends PageComponent {
   protected autobind = true;
 
   protected head = {
-    title: "You are on home",
+    title: "Gjsify"
   };
 
   scope: Scope = {
-    title: "Hello from ssr",
-    content: "When you can see this, ssr works :)",
-    obj: {
-      foo: "bar",
-      note: "This is an example to test the json formatter",
-    },
+
   };
 
   static get observedAttributes(): string[] {
@@ -52,18 +45,22 @@ export class IndexPageComponent extends PageComponent {
 
   protected template(): ReturnType<TemplateFunction> {
     return (
-      <div class="container-fluid py-5 my-5 text-center">
-        <div class="row">
-          <div class="col-12">
-            <h1 ssr-rv-html="title"></h1>
+      <section class="container-fluid text-center">
+        <head class="row">
+          <div class="col-auto mx-auto py-5">
+            <img class="img-fluid d-td-none" src="/images/logo.svg" alt="Gjsify Logo" />
+            <img class="img-fluid d-tl-none" src="/images/logo-light.svg" alt="Gjsify Logo light" />
           </div>
-        </div>
-        <section class="row">
           <div class="col-12">
-            <p ssr-rv-html="content"></p>
+            <h1 hidden>Gjsify</h1>
+            <p class="lead">
+              Combine the power of <strong>Typescript</strong> with the power of <strong><span class="text-primary">G</span>JS</strong>
+            </p>
+
+            <a class="btn btn-outline-primary btn-lg my-4" href="https://gjs-docs.gjsify.org">API Reference</a>
           </div>
-        </section>
-      </div>
+        </head>
+      </section>
     );
   }
 }

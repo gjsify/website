@@ -22,6 +22,7 @@ html(lang='en')
     include ../partials/sidebar.pug
     include ../partials/navbar.pug
     router-view#main(listen-all-links="true")
-      block content            
+      block content
+    include ../partials/footer.pug
     script(async src='/csr/vendors.bundle.js')
     script(async src='/csr/main.bundle.js')

@@ -6,6 +6,15 @@
   "repository": "git@github.com:gjsify/website.git",
   "author": "Pascal Garber <pascal@artandcode.studio>",
   "license": "AGPL-3.0",
+  "scripts": {
+    "start": "yarn workspace @gjsify/website-backend run start",
+    "build": "concurrently 'yarn:build:*'",
+    "build:backend": "yarn workspace @gjsify/website-backend run build",
+    "build:theme": "yarn workspace @gjsify/website-theme run build",
+    "watch": "concurrently 'yarn:watch:*'",
+    "watch:backend": "yarn workspace @gjsify/website-backend run watch",
+    "watch:theme": "yarn workspace @gjsify/website-theme run watch"
+  },
   "devDependencies": {
     "@ribajs/eslint-config": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
@@ -28,5 +37,8 @@
     "!vendor/riba/infra/doc",
     "!vendor/riba/infra/schematics"
   ],
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
 }
