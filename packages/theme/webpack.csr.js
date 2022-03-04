@@ -22,6 +22,12 @@ const config = {
     iconset: true,
     foldername: assets,
   },
+  styles: {
+    build: true,
+    extract: true,
+    resolveUrl: "onlyImports",
+    distPath: assets,
+  },
   tsSourceDir,
   scssSourceDir,
   tsIndexPath,

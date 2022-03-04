@@ -5,7 +5,7 @@ import { bs5Module } from "@ribajs/bs5";
 import { typedocModule } from "@ribajs/typedoc";
 
 // Own
-import * as components from "./components";
+import {} from "./components";
 import * as binders from "./binders";
 import * as formatters from "./formatters";
 
@@ -20,7 +20,7 @@ const bootstrap = () => {
   });
 
   // Regist custom components
-  riba.module.component.regists(components);
+  // riba.module.component.regists(components);
   riba.module.binder.regists(binders);
   riba.module.formatter.regists(formatters);
 

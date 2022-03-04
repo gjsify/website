@@ -1,1 +1,1 @@
-export {};
+export * from "./navigation/navigation.component";

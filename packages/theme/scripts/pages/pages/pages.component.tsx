@@ -1,5 +1,7 @@
-import { PageComponent, HttpError } from "@ribajs/ssr";
+import { PageComponent } from "@ribajs/ssr";
 import { TemplateFunction } from "@ribajs/core";
+
+import apiReferencesTemplate from "./api-references.pug";
 
 export interface Scope {
   title: string;
@@ -14,7 +16,7 @@ export class PagesPageComponent extends PageComponent {
 
   scope: Scope = {
     title: "[ params.handle | capitalize ]",
-    content: "<p>We are [ params.handle ]!</a>",
+    content: "<p>You are on [ params.handle ]!</a>",
     params: {},
   };
 
@@ -40,13 +42,8 @@ export class PagesPageComponent extends PageComponent {
     await super.beforeBind();
     this.head.title = "You are " + this.ctx?.params?.handle;
 
-    if (this.ctx?.params?.handle === "simulate-404") {
-      throw new HttpError("Simulated 404 not found error!", 404);
-    }
-
-    if (this.ctx?.params?.handle === "simulate-500") {
-      console.error("Start simulate 500 internal error..");
-      throw new HttpError("Simulated 500 internal error!", 500);
+    if (this.ctx?.params?.handle === "api-references") {
+      this.scope.content = apiReferencesTemplate();
     }
   }
 
@@ -57,11 +54,6 @@ export class PagesPageComponent extends PageComponent {
   protected template(): ReturnType<TemplateFunction> {
     return (
       <div class="container container-md py-5 my-5 text-center">
-        <div class="row">
-          <div class="col-12">
-            <h1 ssr-rv-template="title"></h1>
-          </div>
-        </div>
         <section class="row">
           <div class="col-12">
             <div ssr-rv-template="content"></div>

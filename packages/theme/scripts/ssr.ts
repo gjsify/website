@@ -3,6 +3,7 @@ import { SSRModule } from "@ribajs/ssr";
 import { Riba, coreModule } from "@ribajs/core";
 
 // Own
+import { NavigationComponent } from "./components";
 import * as pageComponents from "./pages";
 import * as binders from "./binders";
 import * as formatters from "./formatters";
@@ -11,13 +12,13 @@ const riba = new Riba();
 
 // These Riba settings are necessary for the ssr
 riba.configure({
-  prefix: ["ssr-rv"],
+  prefix: ["rv", "ssr-rv"],
   blockUnknownCustomElements: false,
   templateDelimiters: ["[", "]"],
 });
 
 // Regist custom components
-riba.module.component.regists({ ...pageComponents });
+riba.module.component.regists({ ...pageComponents, NavigationComponent });
 riba.module.binder.regists(binders);
 riba.module.formatter.regists(formatters);
 
