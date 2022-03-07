@@ -12,7 +12,7 @@ export interface Scope {
 
 export class PagesPageComponent extends PageComponent {
   public static tagName = "pages-page";
-  public _debug = true;
+  public _debug = false;
   protected autobind = true;
 
   scope: Scope = {

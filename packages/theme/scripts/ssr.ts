@@ -31,6 +31,4 @@ riba.module.formatter.regists(formatters);
 riba.module.regist(coreModule.init());
 riba.module.regist(SSRModule.init());
 
-console.log("Hello from Riba");
-
 riba.bind(document.body);

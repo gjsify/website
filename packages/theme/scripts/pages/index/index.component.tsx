@@ -43,7 +43,7 @@ export class IndexPageComponent extends PageComponent {
   protected template(): ReturnType<TemplateFunction> {
     return (
       <section class="container-fluid text-center">
-        <head class="row">
+        <div class="row">
           <div class="col-auto mx-auto py-5">
             <img
               class="img-fluid d-td-none"
@@ -65,7 +65,7 @@ export class IndexPageComponent extends PageComponent {
               </strong>
             </p>
           </div>
-        </head>
+        </div>
       </section>
     );
   }

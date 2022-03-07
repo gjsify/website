@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
+    "Gjsfy",
     "Gjsify",
-    "NAVIGATIONS"
+    "NAVIGATIONS",
+    "typedoc"
   ],
   "search.exclude": {
     "**/.yarn": true,
