@@ -64,13 +64,6 @@ export class IndexPageComponent extends PageComponent {
                 <span class="text-primary">G</span>JS
               </strong>
             </p>
-
-            <a
-              class="btn btn-outline-primary btn-lg my-4"
-              href="https://gjs-docs.gjsify.org"
-            >
-              API Reference
-            </a>
           </div>
         </head>
       </section>

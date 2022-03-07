@@ -1,3 +1,7 @@
 a {
-    text-decoration-color: $link-decoration-color;
+    color: $body-color;
+    text-decoration: underline;
+    text-decoration-color: $link-decoration-color !important;
+    text-underline-offset: 5px !important;
+    text-decoration-thickness: 2px !important;
 }

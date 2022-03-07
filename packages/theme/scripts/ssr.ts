@@ -1,6 +1,8 @@
 import "@ribajs/ssr/src/polyfills";
 import { SSRModule } from "@ribajs/ssr";
 import { Riba, coreModule } from "@ribajs/core";
+// Import JSX types
+import "@ribajs/bs5";
 
 // Own
 import { NavigationComponent } from "./components";
@@ -12,7 +14,7 @@ const riba = new Riba();
 
 // These Riba settings are necessary for the ssr
 riba.configure({
-  prefix: ["rv", "ssr-rv"],
+  prefix: ["ssr-rv"],
   blockUnknownCustomElements: false,
   templateDelimiters: ["[", "]"],
 });

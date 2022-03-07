@@ -2,6 +2,7 @@ import { PageComponent } from "@ribajs/ssr";
 import { TemplateFunction } from "@ribajs/core";
 
 import apiReferencesTemplate from "./api-references.pug";
+import projectsTemplate from "./projects.pug";
 
 export interface Scope {
   title: string;
@@ -42,8 +43,13 @@ export class PagesPageComponent extends PageComponent {
     await super.beforeBind();
     this.head.title = "You are " + this.ctx?.params?.handle;
 
-    if (this.ctx?.params?.handle === "api-references") {
-      this.scope.content = apiReferencesTemplate();
+    switch (this.ctx?.params?.handle) {
+      case "api-references":
+        this.scope.content = apiReferencesTemplate();
+        break;
+      case "projects":
+        this.scope.content = projectsTemplate();
+        break;
     }
   }
 
@@ -54,11 +60,7 @@ export class PagesPageComponent extends PageComponent {
   protected template(): ReturnType<TemplateFunction> {
     return (
       <div class="container container-md py-5 my-5 text-center">
-        <section class="row">
-          <div class="col-12">
-            <div ssr-rv-template="content"></div>
-          </div>
-        </section>
+        <div ssr-rv-template="content"></div>
       </div>
     );
   }

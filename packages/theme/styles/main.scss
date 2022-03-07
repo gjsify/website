@@ -1,28 +1,30 @@
 // bootstrap
-@import 'charset';
+@import "charset";
 // @import 'fonts';
-@import 'variables-bootstrap';
-@import 'variables-riba';
-@import 'variables-theme';
-@import 'bootstrap';
-@import 'variables-bootstrap';
+@import "variables-bootstrap";
+@import "variables-riba";
+@import "variables-theme";
+@import "bootstrap";
+@import "variables-bootstrap";
+@import "variables-riba";
+@import "variables-theme";
 
 // Riba
-@import '~@ribajs/core';
-@import '~@ribajs/bs5';
-@import '~@ribajs/typedoc';
+@import "~@ribajs/core";
+@import "~@ribajs/bs5";
+@import "~@ribajs/typedoc";
 
 // External Components
-@import 'components/index';
+@import "components/index";
 
 // Custom bootstrap extensions
-@import 'extensions/index';
+@import "extensions/index";
 
 // Layout styles
-@import 'layout';
+@import "layout";
 
 // Template styles
-@import 'templates/index';
+@import "templates/index";
 
 // Custom components and pages
-@import '../scripts/index';
+@import "../scripts/index";

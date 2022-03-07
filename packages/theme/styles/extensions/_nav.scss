@@ -1,0 +1,9 @@
+.nav-link {
+    text-decoration: none;
+    text-decoration-color: $link-decoration-color !important;
+    text-underline-offset: 8px !important;
+    text-decoration-thickness: 2px !important;
+    &.active {
+        text-decoration: underline;
+    }
+}
