@@ -1,4 +1,15 @@
 body {
     padding-top: $default-navbar-height;
+}
+
+// WORKAROUND maybe a problem of the bootstrap developer version on the master branch
+// Switch to bootstrap 5.2.x as soon as this is released
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
     overflow-x: hidden;
 }
